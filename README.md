@@ -1,4 +1,4 @@
-這份程式碼是一個名為 Batch Render Pro 的軟體主程式。它是一個基於 Python 與 PySide6 框架開發的圖形介面工具，專門用於處理 Blender 的批次渲染任務。
+這份程式碼是一個名為 RBatch 的軟體主程式。它是一個基於 Python 與 PySide6 框架開發的圖形介面工具，專門用於處理 Blender 的批次渲染任務。
 
 以下是該軟體的主要功能與特點：
 
