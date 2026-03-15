@@ -1,5 +1,5 @@
 @echo off
-title Blender Batch Tool
+RBatch
 echo ---------------------------------------
 echo Launching Blender Batch Renderer...
 echo ---------------------------------------
