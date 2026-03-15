@@ -1,37 +1,19 @@
-這份程式碼是一個名為 RBatch 的軟體主程式。它是一個基於 Python 與 PySide6 框架開發的圖形介面工具，專門用於處理 Blender 的批次渲染任務。
+這是一個基於 Python 與 PySide6 開發的 Blender 批次渲染管理器。
 
-以下是該軟體的主要功能與特點：
+1.批次自動化：支援同時匯入多個 .blend 檔案並排隊渲染，無需手動開啟每個檔案。
 
-1. 核心功能
-批次渲染管理：使用者可以將多個 .blend 檔案拖入軟體中，統籌管理並排隊進行渲染。
+2.專業監控介面：深色模式設計，提供即時進度條、日誌視窗與狀態燈號（等待、渲染中、完成、錯誤）。
 
-獨立渲染程序：透過 RenderWorker 類別，軟體會在背景呼叫 Blender 執行檔進行渲染，不會導致介面凍結。
+3.靈活參數控制：可在介面直接調整渲染引擎（EEVEE/Cycles）、影格範圍、解析度與硬體加速（GPU/CPU）。
 
-自動偵測 Blender：系統會自動在常見路徑（如 Program Files、Steam 等）尋找已安裝的 Blender 版本。
+4.智慧偵測：自動尋找電腦中的 Blender 路徑，並檢查檔案與軟體版本的相容性。
 
-2. 介面特色
-深色模式設計：介面採用深灰色調（如 #1a1a1a）與橘色（如 #e87d0d）強調色，符合 3D 設計軟體的視覺風格。
+This is the core script for Batch Render Pro, a Python-based Blender batch rendering manager built with PySide6.
 
-自定義元件：包含自製的勾選框（CheckMark）與任務卡片（TaskCard），能即時顯示渲染進度條與狀態圖示（如等待中、執行中、已完成、錯誤等）。
+1.Batch Automation: Supports importing multiple .blend files into a queue for automated rendering, eliminating the need to open files individually.
 
-拖放支援：提供一個 DropZone 區域，方便使用者直接將檔案拖進去開始作業。
+2.Professional UI: Features a dark-themed interface with real-time progress bars, logs, and status indicators (Pending, Rendering, Finished, Error).
 
-3. 進階設定
-渲染參數自訂：針對每個任務，使用者可以單獨設定：
+3.Flexible Controls: Allows direct configuration of render engines (EEVEE/Cycles), frame ranges, resolution, and hardware acceleration (GPU/CPU) within the app.
 
-渲染引擎（如 EEVEE、Cycles）。
-
-渲染範圍（起始與結束幀）。
-
-解析度與輸出路徑。
-
-硬體加速（CPU 或 GPU）。
-
-版本檢查：軟體會檢查 Blender 版本是否與 .blend 檔案相容，若版本過低會顯示警告圖示（⚠）。
-
-4. 技術架構
-多執行緒運作：使用 QThread 處理耗時任務（如讀取縮圖、獲取檔案資訊、執行渲染），確保 UI 保持流暢。
-
-多語言支援：具備翻譯載入器，可從 languages 資料夾載入不同語言的 JSON 檔案。
-
-簡單來說，這是一個為了簡化 3D 創作者工作流程而設計的工具，讓原本需要逐一開啟檔案渲染的過程變得自動化且可視化。
+4.Smart Detection: Automatically locates Blender installations and performs version compatibility checks for each project file.
